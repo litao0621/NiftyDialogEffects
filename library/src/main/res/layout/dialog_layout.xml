@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+
+https://github.com/android/platform_frameworks_base/blob/master/core/res/res/layout/alert_dialog_holo.xml
+
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dialog_padding"
+    android:paddingRight="@dimen/dialog_padding"
+    >
+
+    <LinearLayout
+
+        android:id="@+id/parentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#22000000"
+            android:orientation="vertical">
+            <RelativeLayout android:id="@+id/title_template"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dip"
+                android:layout_marginEnd="16dip">
+                <ImageView android:id="@+id/icon"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dip"
+                    android:scaleType="centerInside"
+                    android:layout_centerVertical="true"
+                    android:src="@null"
+                    />
+                <TextView
+                    android:id="@+id/alertTitle"
+                    style="@style/DialogWindowTitle"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip" />
+            </RelativeLayout>
+            <View android:id="@+id/titleDivider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="visible"
+                android:background="@color/divider_color" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/contentPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView android:id="@+id/message"
+                style="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dip"
+                android:paddingEnd="16dip"
+                android:paddingTop="8dip"
+                android:minHeight="72dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="8dip"
+                android:textColor="@color/msg_color"
+                android:textIsSelectable="true"/>
+        </LinearLayout>
+
+        <FrameLayout android:id="@+id/customPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:id="@+id/button1"
+                style="@style/dialog_btn"
+                android:visibility="gone"
+                android:text="OK"
+                />
+            <Button
+                android:id="@+id/button2"
+                style="@style/dialog_btn"
+                android:visibility="gone"
+                android:text="Cancle"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

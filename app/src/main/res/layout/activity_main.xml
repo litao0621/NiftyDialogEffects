@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e74c3c"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#d94839"
+        android:textColor="#FFFFFF"
+        android:padding="30dp"
+        android:gravity="center"
+        android:text="Nifty Modal Dialog Effects" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/fadein"
+            style="@style/my_btn"
+            android:text="Fade In"
+             />
+
+        <Button
+            android:id="@+id/slideright"
+            style="@style/my_btn"
+            android:text="Slide Right"
+             />
+        <Button
+            android:id="@+id/slideleft"
+            style="@style/my_btn"
+            android:text="Slide Left"
+             />
+        <Button
+            android:id="@+id/slidetop"
+            style="@style/my_btn"
+            android:text="Slide Top"
+             />
+        <Button
+            android:id="@+id/slideBottom"
+            style="@style/my_btn"
+            android:text="Slide Bottom"
+             />
+        <Button
+            android:id="@+id/newspager"
+            style="@style/my_btn"
+            android:text="News Paper"
+            />
+        <Button
+            android:id="@+id/fall"
+            style="@style/my_btn"
+            android:text="Fall"
+            />
+        <Button
+            android:id="@+id/sidefall"
+            style="@style/my_btn"
+            android:text="Side Fall"
+            />
+        <Button
+            android:id="@+id/shake"
+            style="@style/my_btn"
+            android:text="Shake"
+            />
+        <Button
+            android:id="@+id/fliph"
+            style="@style/my_btn"
+            android:text="3D Flip (horizontal)"
+            />
+        <Button
+            android:id="@+id/flipv"
+            style="@style/my_btn"
+            android:text="3D Flip (vertical)"
+            />
+        <Button
+            android:id="@+id/rotatebottom"
+            style="@style/my_btn"
+            android:text="3D Rotate Bottom"
+            />
+        <Button
+            android:id="@+id/rotateleft"
+            style="@style/my_btn"
+            android:text="3D Rotate Left"
+            />
+        <Button
+            android:id="@+id/slit"
+            style="@style/my_btn"
+            android:text="3D Slit"
+            />
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
