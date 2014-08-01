@@ -26,7 +26,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
 
 
-    private Effectstype type;
+    private Effectstype type=null;
 
     private LinearLayout mLinearLayoutView;
 
@@ -96,6 +96,9 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
             public void onShow(DialogInterface dialogInterface) {
 
                 mLinearLayoutView.setVisibility(View.VISIBLE);
+                if(type==null){
+                    type=Effectstype.Slidetop;
+                }
                 start(type);
 
 
