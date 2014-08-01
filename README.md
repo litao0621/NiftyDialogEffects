@@ -11,7 +11,8 @@ Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
 ![Image][3]
 .
 ![Image][4]
-
+.
+![Image][5]
 
 # Quick start
 ``` java
@@ -53,7 +54,7 @@ dialogBuilder
 ```
 # Effects
 `Fadein`, `Slideleft`, `Slidetop`, `SlideBottom`, `Slideright`, `Fall`, `Newspager`, `Fliph`, `Flipv`, `RotateBottom`, `RotateLeft`, `Slit`, `Shake`, `Sidefill`
-![Image][5]
+
 ([See The Effect][1])
 
 
