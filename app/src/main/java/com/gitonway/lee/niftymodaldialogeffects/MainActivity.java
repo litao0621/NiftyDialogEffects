@@ -56,6 +56,7 @@ public class MainActivity extends Activity{
                 .withEffect(effect)
                 .withButton1Text("OK")
                 .withButton2Text("Cancel")
+//                .setCustomView(viewresId,context)
                 .setButton1Click(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

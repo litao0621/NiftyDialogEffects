@@ -24,6 +24,14 @@ import com.gitonway.lee.niftymodaldialogeffects.lib.effects.BaseEffects;
  */
 public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
+    private final String defTextColor="#FFFFFFFF";
+
+    private final String defDividerColor="#11000000";
+
+    private final String defMsgColor="#FFFFFFFF";
+
+    private final String defDialogColor="#FFE74C3C";
+
 
 
     private Effectstype type=null;
@@ -110,6 +118,13 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
                 dismiss();
             }
         });
+    }
+
+    public void toDefault(){
+        mTitle.setTextColor(Color.parseColor(defTextColor));
+        mDivider.setBackgroundColor(Color.parseColor(defDividerColor));
+        mMessage.setTextColor(Color.parseColor(defMsgColor));
+        mLinearLayoutView.setBackgroundColor(Color.parseColor(defDialogColor));
     }
 
     public NiftyDialogBuilder withDividerColor(String colorString) {
