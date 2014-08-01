@@ -5,8 +5,6 @@ Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
 
 
 # ScreenShot
-![Image][5]
-.
 
 ![Image][2]
 .
@@ -55,7 +53,7 @@ dialogBuilder
 ```
 # Effects
 `Fadein`, `Slideleft`, `Slidetop`, `SlideBottom`, `Slideright`, `Fall`, `Newspager`, `Fliph`, `Flipv`, `RotateBottom`, `RotateLeft`, `Slit`, `Shake`, `Sidefill`
-
+![Image][5]
 ([See The Effect][1])
 
 
