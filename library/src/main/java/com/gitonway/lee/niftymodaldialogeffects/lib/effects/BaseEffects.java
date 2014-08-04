@@ -9,9 +9,10 @@ import com.nineoldandroids.view.ViewHelper;
  * Created by lee on 2014/7/30.
  */
 public abstract  class BaseEffects {
-    public final int DURATION = 1 * 700;
 
-    private long mDuration=DURATION ;
+    private static final int DURATION = 1 * 700;
+
+    protected long mDuration =DURATION ;
 
     private AnimatorSet mAnimatorSet;
 
@@ -35,6 +36,9 @@ public abstract  class BaseEffects {
     public AnimatorSet getAnimatorSet() {
         return mAnimatorSet;
     }
-
+    
+    public void setDuration(long duration) {
+        this.mDuration = duration;
+    }
 
 }

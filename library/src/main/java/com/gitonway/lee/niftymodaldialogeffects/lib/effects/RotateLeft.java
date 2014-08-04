@@ -12,9 +12,9 @@ public class RotateLeft extends BaseEffects{
     @Override
     protected void setupAnimation(View view) {
         getAnimatorSet().playTogether(
-                ObjectAnimator.ofFloat(view, "rotationY", 90, 0).setDuration(DURATION),
-                ObjectAnimator.ofFloat(view, "translationX", -300, 0).setDuration(DURATION),
-                ObjectAnimator.ofFloat(view, "alpha", 0, 1).setDuration(DURATION*3/2)
+                ObjectAnimator.ofFloat(view, "rotationY", 90, 0).setDuration(mDuration),
+                ObjectAnimator.ofFloat(view, "translationX", -300, 0).setDuration(mDuration),
+                ObjectAnimator.ofFloat(view, "alpha", 0, 1).setDuration(mDuration*3/2)
 
         );
     }

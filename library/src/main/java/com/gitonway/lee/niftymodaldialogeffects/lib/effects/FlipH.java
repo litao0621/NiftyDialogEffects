@@ -12,7 +12,7 @@ public class FlipH  extends BaseEffects{
     @Override
     protected void setupAnimation(View view) {
         getAnimatorSet().playTogether(
-                ObjectAnimator.ofFloat(view, "rotationY", -90, 0).setDuration(DURATION)
+                ObjectAnimator.ofFloat(view, "rotationY", -90, 0).setDuration(mDuration)
 
         );
     }

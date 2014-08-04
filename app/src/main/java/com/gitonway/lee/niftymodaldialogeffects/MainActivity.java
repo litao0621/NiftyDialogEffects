@@ -54,6 +54,7 @@ public class MainActivity extends Activity{
                 .withMessage("This is a modal Dialog.") //.withMessage(null)  no Msg
                 .withMessageColor("#FFFFFF")
                 .withIcon(getResources().getDrawable(R.drawable.icon))
+                .withDuration(700)
                 .withEffect(effect)
                 .withButton1Text("OK")
                 .withButton2Text("Cancel")
