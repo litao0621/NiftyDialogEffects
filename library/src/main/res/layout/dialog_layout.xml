@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 /*
 ** Copyright 2010, The Android Open Source Project
 **
@@ -19,103 +18,114 @@
 https://github.com/android/platform_frameworks_base/blob/master/core/res/res/layout/alert_dialog_holo.xml
 
 -->
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/dialog_padding"
-    android:paddingRight="@dimen/dialog_padding"
-    >
+    android:paddingRight="@dimen/dialog_padding">
 
     <LinearLayout
 
         android:id="@+id/parentPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/dialog_bg"
         android:layout_centerInParent="true"
-        android:visibility="visible"
+        android:background="@drawable/dialog_bg"
         android:clickable="false"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible">
 
-        <LinearLayout android:id="@+id/topPanel"
+        <LinearLayout
+            android:id="@+id/topPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#22000000"
             android:orientation="vertical">
-            <RelativeLayout android:id="@+id/title_template"
+
+            <RelativeLayout
+                android:id="@+id/title_template"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginStart="16dip"
-                android:layout_marginEnd="16dip">
-                <ImageView android:id="@+id/icon"
+                android:layout_marginEnd="16dip"
+                android:layout_marginStart="16dip">
+
+                <ImageView
+                    android:id="@+id/icon"
                     android:layout_width="32dp"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_margin="8dip"
                     android:scaleType="centerInside"
-                    android:layout_centerVertical="true"
-                    android:src="@null"
-                    />
+                    android:src="@null" />
+
                 <TextView
                     android:id="@+id/alertTitle"
                     style="@style/DialogWindowTitle"
-                    android:singleLine="true"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:layout_centerInParent="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dip" />
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8dip"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true" />
             </RelativeLayout>
-            <View android:id="@+id/titleDivider"
+
+            <View
+                android:id="@+id/titleDivider"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:visibility="visible"
-                android:background="@color/divider_color" />
+                android:background="@color/divider_color"
+                android:visibility="visible" />
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/contentPanel"
+        <LinearLayout
+            android:id="@+id/contentPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-            <TextView android:id="@+id/message"
+
+            <TextView
+                android:id="@+id/message"
                 style="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="16dip"
-                android:paddingEnd="16dip"
-                android:paddingTop="8dip"
-                android:minHeight="72dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:paddingBottom="8dip"
+                android:paddingEnd="16dip"
+                android:paddingStart="16dip"
+                android:paddingTop="8dip"
                 android:textColor="@color/msg_color"
-                android:textIsSelectable="true"/>
+                android:textIsSelectable="true" />
         </LinearLayout>
 
-        <FrameLayout android:id="@+id/customPanel"
+        <FrameLayout
+            android:id="@+id/customPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </FrameLayout>
+            android:layout_weight="1"></FrameLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/button1"
                 style="@style/dialog_btn"
-                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
                 android:text="OK"
-                />
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/button2"
                 style="@style/dialog_btn"
-                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
                 android:text="Cancle"
-                />
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

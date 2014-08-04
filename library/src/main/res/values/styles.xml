@@ -23,7 +23,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">36dp</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
         <item name="android:background">@drawable/btn_selector</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>

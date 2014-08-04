@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.gitonway.lee.niftymodaldialogeffects.lib.Effectstype;
@@ -47,7 +48,7 @@ public class MainActivity extends Activity{
         }
 
         dialogBuilder
-                .withTitle("Modal Dialog")
+                .withTitle("Modal Dialog")          //.withTitle(null)  no title
                 .withTitleColor("#FFFFFF")
                 .withDividerColor("#11000000")
                 .withMessage("This is a modal Dialog.")
@@ -56,11 +57,11 @@ public class MainActivity extends Activity{
                 .withEffect(effect)
                 .withButton1Text("OK")
                 .withButton2Text("Cancel")
-//                .setCustomView(viewresId,context)
+                .setCustomView(R.layout.custom_view,v.getContext())         //.setCustomView(View or ResId,context)
                 .setButton1Click(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(v.getContext(),"i'm btn1",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(v.getContext(), "i'm btn1", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setButton2Click(new View.OnClickListener() {

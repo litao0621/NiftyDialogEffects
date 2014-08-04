@@ -40,6 +40,10 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private RelativeLayout mRlinearLayoutView;
 
+    private LinearLayout mLinearLayoutTopView;
+
+    private FrameLayout mFrameLayoutCustomView;
+
     private View mDialogView;
 
     private View mDivider;
@@ -90,8 +94,12 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
 
         mDialogView = View.inflate(context, R.layout.dialog_layout, null);
+
         mLinearLayoutView=(LinearLayout)mDialogView.findViewById(R.id.parentPanel);
         mRlinearLayoutView=(RelativeLayout)mDialogView.findViewById(R.id.main);
+        mLinearLayoutTopView=(LinearLayout)mDialogView.findViewById(R.id.topPanel);
+        mFrameLayoutCustomView=(FrameLayout)mDialogView.findViewById(R.id.customPanel);
+
         mTitle = (TextView) mDialogView.findViewById(R.id.alertTitle);
         mMessage = (TextView) mDialogView.findViewById(R.id.message);
         mIcon = (ImageView) mDialogView.findViewById(R.id.icon);
@@ -134,7 +142,13 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
 
     public NiftyDialogBuilder withTitle(CharSequence title) {
-        mTitle.setText(title);
+        if (title==null){
+            mLinearLayoutTopView.setVisibility(View.GONE);
+        }else {
+            mLinearLayoutTopView.setVisibility(View.VISIBLE);
+            mTitle.setText(title);
+        }
+
         return this;
     }
 
@@ -199,11 +213,20 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     public NiftyDialogBuilder setCustomView(int resId, Context context) {
         View customView = View.inflate(context, resId, null);
-        ((FrameLayout)mDialogView.findViewById(R.id.customPanel)).addView(customView);
+        if (mFrameLayoutCustomView.getChildCount()>0){
+            mFrameLayoutCustomView.removeAllViews();
+        }
+        mFrameLayoutCustomView.addView(customView);
         return this;
     }
 
-
+    public NiftyDialogBuilder setCustomView(View view, Context context) {
+        if (mFrameLayoutCustomView.getChildCount()>0){
+            mFrameLayoutCustomView.removeAllViews();
+        }
+        mFrameLayoutCustomView.addView(view);
+        return this;
+    }
 
     @Override
     public void show() {
