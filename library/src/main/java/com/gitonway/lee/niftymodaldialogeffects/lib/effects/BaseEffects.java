@@ -27,14 +27,6 @@ public abstract  class BaseEffects {
         mAnimatorSet.start();
     }
     public void reset(View view) {
-        ViewHelper.setAlpha(view, 1);
-        ViewHelper.setScaleX(view, 1);
-        ViewHelper.setScaleY(view, 1);
-        ViewHelper.setTranslationX(view, 0);
-        ViewHelper.setTranslationY(view, 0);
-        ViewHelper.setRotation(view, 0);
-        ViewHelper.setRotationY(view, 0);
-        ViewHelper.setRotationX(view, 0);
         ViewHelper.setPivotX(view, view.getMeasuredWidth() / 2.0f);
         ViewHelper.setPivotY(view, view.getMeasuredHeight() / 2.0f);
     }
