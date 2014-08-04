@@ -28,16 +28,16 @@ dialogBuilder
 # Config
 ``` java
 dialogBuilder
-    .withTitle("Modal Dialog")          //.withTitle(null)  no title
+    .withTitle("Modal Dialog")                              //.withTitle(null)  no title
     .withTitleColor("#FFFFFF")
     .withDividerColor("#11000000")
-    .withMessage("This is a modal Dialog.")
+    .withMessage("This is a modal Dialog.")                 //.withMessage(null)  no Msg
     .withMessageColor("#FFFFFF")
     .withIcon(getResources().getDrawable(R.drawable.icon))
     .withEffect(effect)
     .withButton1Text("OK")
     .withButton2Text("Cancel")
-    .setCustomView(R.layout.your_view,context)         //.setCustomView(View or ResId,context)
+    .setCustomView(R.layout.your_view,context)              //.setCustomView(View or ResId,context)
     .setButton1Click(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
