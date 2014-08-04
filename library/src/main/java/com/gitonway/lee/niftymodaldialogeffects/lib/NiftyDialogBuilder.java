@@ -40,6 +40,8 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private RelativeLayout mRlinearLayoutView;
 
+    private LinearLayout mLinearLayoutMsgView;
+
     private LinearLayout mLinearLayoutTopView;
 
     private FrameLayout mFrameLayoutCustomView;
@@ -98,6 +100,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         mLinearLayoutView=(LinearLayout)mDialogView.findViewById(R.id.parentPanel);
         mRlinearLayoutView=(RelativeLayout)mDialogView.findViewById(R.id.main);
         mLinearLayoutTopView=(LinearLayout)mDialogView.findViewById(R.id.topPanel);
+        mLinearLayoutMsgView=(LinearLayout)mDialogView.findViewById(R.id.contentPanel);
         mFrameLayoutCustomView=(FrameLayout)mDialogView.findViewById(R.id.customPanel);
 
         mTitle = (TextView) mDialogView.findViewById(R.id.alertTitle);
@@ -142,13 +145,8 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
 
     public NiftyDialogBuilder withTitle(CharSequence title) {
-        if (title==null){
-            mLinearLayoutTopView.setVisibility(View.GONE);
-        }else {
-            mLinearLayoutTopView.setVisibility(View.VISIBLE);
-            mTitle.setText(title);
-        }
-
+        toggleView(mLinearLayoutTopView,title);
+        mTitle.setText(title);
         return this;
     }
 
@@ -158,12 +156,14 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     }
 
     public NiftyDialogBuilder withMessage(int textResId) {
+        toggleView(mLinearLayoutMsgView,textResId);
         mMessage.setText(textResId);
         return this;
     }
 
-    public NiftyDialogBuilder withMessage(CharSequence text) {
-        mMessage.setText(text);
+    public NiftyDialogBuilder withMessage(CharSequence msg) {
+        toggleView(mLinearLayoutMsgView,msg);
+        mMessage.setText(msg);
         return this;
     }
     public NiftyDialogBuilder withMessageColor(String colorString) {
@@ -228,6 +228,13 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         return this;
     }
 
+    private void toggleView(View view,Object obj){
+        if (obj==null){
+            view.setVisibility(View.GONE);
+        }else {
+            view.setVisibility(View.VISIBLE);
+        }
+    }
     @Override
     public void show() {
 
