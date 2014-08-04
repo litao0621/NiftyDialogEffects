@@ -28,7 +28,7 @@ dialogBuilder
 # Config
 ``` java
 dialogBuilder
-    .withTitle("Modal Dialog")
+    .withTitle("Modal Dialog")          //.withTitle(null)  no title
     .withTitleColor("#FFFFFF")
     .withDividerColor("#11000000")
     .withMessage("This is a modal Dialog.")
@@ -37,15 +37,15 @@ dialogBuilder
     .withEffect(effect)
     .withButton1Text("OK")
     .withButton2Text("Cancel")
-    .setCustomView(viewresId,context)
+    .setCustomView(R.layout.your_view,context)         //.setCustomView(View or ResId,context)
     .setButton1Click(new View.OnClickListener() {
-         @Override
+        @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(),"i'm btn1",Toast.LENGTH_SHORT).show();
-        }
+            Toast.makeText(v.getContext(), "i'm btn1", Toast.LENGTH_SHORT).show();
+                    }
     })
     .setButton2Click(new View.OnClickListener() {
-         @Override
+        @Override
         public void onClick(View v) {
             Toast.makeText(v.getContext(),"i'm btn2",Toast.LENGTH_SHORT).show();
         }
