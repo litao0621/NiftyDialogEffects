@@ -60,6 +60,8 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private Button mButton2;
 
+    private int mDuration = -1;
+
     private volatile static NiftyDialogBuilder instance;
 
     public NiftyDialogBuilder(Context context) {
@@ -180,10 +182,17 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         mIcon.setImageDrawable(icon);
         return this;
     }
+
+    public NiftyDialogBuilder withDuration(int duration) {
+        this.mDuration=duration;
+        return this;
+    }
+
     public NiftyDialogBuilder withEffect(Effectstype type) {
         this.type=type;
         return this;
     }
+    
     public NiftyDialogBuilder withButtonDrawable(int resid) {
         mButton1.setBackgroundResource(resid);
         mButton2.setBackgroundResource(resid);
@@ -244,6 +253,9 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private void start(Effectstype type){
         BaseEffects animator = type.getAnimator();
+        if(mDuration != -1){
+            animator.setDuration(Math.abs(mDuration));
+        }
         animator.start(mRlinearLayoutView);
     }
 

@@ -13,7 +13,7 @@ public class FadeIn extends BaseEffects{
     @Override
     protected void setupAnimation(View view) {
         getAnimatorSet().playTogether(
-                ObjectAnimator.ofFloat(view,"alpha",0,1).setDuration(DURATION)
+                ObjectAnimator.ofFloat(view,"alpha",0,1).setDuration(mDuration)
 
         );
     }
