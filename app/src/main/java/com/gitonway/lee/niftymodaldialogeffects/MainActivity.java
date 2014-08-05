@@ -42,16 +42,16 @@ public class MainActivity extends Activity{
         }
 
         dialogBuilder
-                .withTitle("Modal Dialog")              //.withTitle(null)  no title
-                .withTitleColor("#FFFFFF")
-                .withDividerColor("#11000000")
-                .withMessage("This is a modal Dialog.") //.withMessage(null)  no Msg
-                .withMessageColor("#FFFFFF")
+                .withTitle("Modal Dialog")                                  //.withTitle(null)  no title
+                .withTitleColor("#FFFFFF")                                  //def
+                .withDividerColor("#11000000")                              //def
+                .withMessage("This is a modal Dialog.")                     //.withMessage(null)  no Msg
+                .withMessageColor("#FFFFFF")                                //def
                 .withIcon(getResources().getDrawable(R.drawable.icon))
-                .withDuration(700)
-                .withEffect(effect)
-                .withButton1Text("OK")
-                .withButton2Text("Cancel")
+                .withDuration(700)                                          //def
+                .withEffect(effect)                                         //def Effectstype.Slidetop
+                .withButton1Text("OK")                                      //def gone
+                .withButton2Text("Cancel")                                  //def gone
                 .setCustomView(R.layout.custom_view,v.getContext())         //.setCustomView(View or ResId,context)
                 .setButton1Click(new View.OnClickListener() {
                     @Override
