@@ -38,6 +38,7 @@ dialogBuilder
     .withEffect(effect)                                         //def Effectstype.Slidetop
     .withButton1Text("OK")                                      //def gone
     .withButton2Text("Cancel")                                  //def gone
+    .isCancelableOnTouchOutside(true)                           //def    | isCancelable(true)
     .setCustomView(R.layout.custom_view,v.getContext())         //.setCustomView(View or ResId,context)
     .setButton1Click(new View.OnClickListener() {
         @Override
