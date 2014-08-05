@@ -48,6 +48,7 @@ public class MainActivity extends Activity{
                 .withMessage("This is a modal Dialog.")                     //.withMessage(null)  no Msg
                 .withMessageColor("#FFFFFF")                                //def
                 .withIcon(getResources().getDrawable(R.drawable.icon))
+                .isCancelableOnTouchOutside(true)                           //def    | isCancelable(true)
                 .withDuration(700)                                          //def
                 .withEffect(effect)                                         //def Effectstype.Slidetop
                 .withButton1Text("OK")                                      //def gone

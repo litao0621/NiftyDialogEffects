@@ -62,6 +62,8 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private int mDuration = -1;
 
+    private boolean isCancelable=true;
+
     private volatile static NiftyDialogBuilder instance;
 
     public NiftyDialogBuilder(Context context) {
@@ -128,7 +130,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         mRlinearLayoutView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dismiss();
+                if (isCancelable)dismiss();
             }
         });
     }
@@ -234,6 +236,18 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
             mFrameLayoutCustomView.removeAllViews();
         }
         mFrameLayoutCustomView.addView(view);
+
+        return this;
+    }
+    public NiftyDialogBuilder isCancelableOnTouchOutside(boolean cancelable) {
+        this.isCancelable=cancelable;
+        this.setCanceledOnTouchOutside(cancelable);
+        return this;
+    }
+
+    public NiftyDialogBuilder isCancelable(boolean cancelable) {
+        this.isCancelable=cancelable;
+        this.setCancelable(cancelable);
         return this;
     }
 
