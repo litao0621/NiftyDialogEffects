@@ -1,14 +1,8 @@
 package com.gitonway.lee.niftymodaldialogeffects;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.gitonway.lee.niftymodaldialogeffects.lib.Effectstype;
@@ -68,7 +62,7 @@ public class MainActivity extends Activity{
                 .setButton2Click(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(v.getContext(),"i'm btn2",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(v.getContext(), "i'm btn2", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .show();
