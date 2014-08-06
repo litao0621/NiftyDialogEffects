@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -62,6 +63,8 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private int mDuration = -1;
 
+    private static  int mOrientation=1;
+
     private boolean isCancelable=true;
 
     private volatile static NiftyDialogBuilder instance;
@@ -83,9 +86,17 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         params.height = ViewGroup.LayoutParams.MATCH_PARENT;
         params.width  = ViewGroup.LayoutParams.MATCH_PARENT;
         getWindow().setAttributes((android.view.WindowManager.LayoutParams) params);
+
     }
 
     public static NiftyDialogBuilder getInstance(Context context) {
+
+        int ort=context.getResources().getConfiguration().orientation;
+        if (mOrientation!=ort){
+            mOrientation=ort;
+            instance=null;
+        }
+
         if (instance == null) {
             synchronized (NiftyDialogBuilder.class) {
                 if (instance == null) {
@@ -94,6 +105,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
             }
         }
         return instance;
+
     }
 
     private void init(Context context) {
@@ -113,6 +125,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         mDivider = mDialogView.findViewById(R.id.titleDivider);
         mButton1=(Button)mDialogView.findViewById(R.id.button1);
         mButton2=(Button)mDialogView.findViewById(R.id.button2);
+
         setContentView(mDialogView);
         this.setOnShowListener(new OnShowListener() {
             @Override
@@ -262,6 +275,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     public void show() {
 
         if (mTitle.getText().equals("")) mDialogView.findViewById(R.id.topPanel).setVisibility(View.GONE);
+
         super.show();
     }
 
