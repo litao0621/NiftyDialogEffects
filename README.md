@@ -59,7 +59,7 @@ dialogBuilder
 
 ([See The Effect][1])
 
-=======
+# License
 Copyright 2014 gitonway.
 
 Licensed under the Apache License, Version 2.0 (the "License");
