@@ -39,7 +39,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private LinearLayout mLinearLayoutView;
 
-    private RelativeLayout mRlinearLayoutView;
+    private RelativeLayout mRelativeLayoutView;
 
     private LinearLayout mLinearLayoutMsgView;
 
@@ -114,7 +114,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         mDialogView = View.inflate(context, R.layout.dialog_layout, null);
 
         mLinearLayoutView=(LinearLayout)mDialogView.findViewById(R.id.parentPanel);
-        mRlinearLayoutView=(RelativeLayout)mDialogView.findViewById(R.id.main);
+        mRelativeLayoutView=(RelativeLayout)mDialogView.findViewById(R.id.main);
         mLinearLayoutTopView=(LinearLayout)mDialogView.findViewById(R.id.topPanel);
         mLinearLayoutMsgView=(LinearLayout)mDialogView.findViewById(R.id.contentPanel);
         mFrameLayoutCustomView=(FrameLayout)mDialogView.findViewById(R.id.customPanel);
@@ -127,6 +127,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         mButton2=(Button)mDialogView.findViewById(R.id.button2);
 
         setContentView(mDialogView);
+
         this.setOnShowListener(new OnShowListener() {
             @Override
             public void onShow(DialogInterface dialogInterface) {
@@ -140,7 +141,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
             }
         });
-        mRlinearLayoutView.setOnClickListener(new View.OnClickListener() {
+        mRelativeLayoutView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isCancelable)dismiss();
@@ -284,7 +285,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         if(mDuration != -1){
             animator.setDuration(Math.abs(mDuration));
         }
-        animator.start(mRlinearLayoutView);
+        animator.start(mRelativeLayoutView);
     }
 
     @Override
