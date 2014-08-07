@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-
-"features": [
-{ "type": "Feature", "properties": { "FACILITY_I": 123976.0, "SERVICE_DA": "2014\/08\/7", "CALL_SIGN": "NULL", "CHANNEL": 234.0, "APP_ID": 500243.0, "COUNTRY": "US", "CLASS": "L1", "SERVICE_TY": "FL", "STATE": "GA", "TRANSLATOR": 0.0, "CITY": "BEIJING" }, "geometry": { "type": "Point", "coordinates": [ 116.403694,39.917149 ] } }
-
-]
-}
