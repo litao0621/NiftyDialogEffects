@@ -1,5 +1,6 @@
 package com.gitonway.lee.niftymodaldialogeffects.lib;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -97,7 +98,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
             instance=null;
         }
 
-        if (instance == null) {
+        if (instance == null&&!((Activity) context).isFinishing()) {
             synchronized (NiftyDialogBuilder.class) {
                 if (instance == null) {
                     instance = new NiftyDialogBuilder(context,R.style.dialog_untran);
@@ -274,8 +275,6 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     }
     @Override
     public void show() {
-
-        if (mTitle.getText().equals("")) mDialogView.findViewById(R.id.topPanel).setVisibility(View.GONE);
 
         super.show();
     }
