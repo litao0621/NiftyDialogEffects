@@ -14,7 +14,7 @@ Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
 .
 ![Image][5]
 
-# Quick start
+# Usage
 ``` java
 NiftyDialogBuilder dialogBuilder=NiftyDialogBuilder.getInstance(this);
 
@@ -25,7 +25,7 @@ dialogBuilder
 ```
 
 
-# Config
+# Configuration
 ``` java
 dialogBuilder
     .withTitle("Modal Dialog")                                  //.withTitle(null)  no title
