@@ -68,7 +68,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private boolean isCancelable=true;
 
-    private volatile static NiftyDialogBuilder instance;
+    private static NiftyDialogBuilder instance;
 
     public NiftyDialogBuilder(Context context) {
         super(context);
@@ -91,26 +91,12 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     }
 
     public static NiftyDialogBuilder getInstance(Context context) {
-
-        int ort=context.getResources().getConfiguration().orientation;
-        if (mOrientation!=ort){
-            mOrientation=ort;
-            instance=null;
-        }
-
-        if (instance == null||((Activity) context).isFinishing()) {
-            synchronized (NiftyDialogBuilder.class) {
-                if (instance == null) {
-                    instance = new NiftyDialogBuilder(context,R.style.dialog_untran);
-                }
-            }
-        }
+        instance = new NiftyDialogBuilder(context,R.style.dialog_untran);
         return instance;
 
     }
 
     private void init(Context context) {
-
 
         mDialogView = View.inflate(context, R.layout.dialog_layout, null);
 
@@ -275,8 +261,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     }
     @Override
     public void show() {
-
-        super.show();
+            super.show();
     }
 
     private void start(Effectstype type){
