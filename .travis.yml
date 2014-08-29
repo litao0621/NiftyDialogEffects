@@ -30,10 +30,7 @@ before_install:
   - echo yes | android update sdk --filter extra-android-support --no-ui --force > /dev/null
   - echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
 
-before_script:
-  - chmod +x gradlew
+
 
 install:
  - ./gradlew assemble
-
-script: ./gradlew clean build
