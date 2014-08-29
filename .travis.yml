@@ -34,5 +34,3 @@ before_install:
 
 install:
  - ./gradlew assemble
- 
-script: ./gradlew clean build
