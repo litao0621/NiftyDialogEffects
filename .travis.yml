@@ -32,7 +32,7 @@ before_install:
   # - export PATH=$GRADLE_HOME/bin:$PATH
 
   # just to test gradle version, against our provided one
-  - ./gradlew -v
+  #- ./gradlew -v
 
   # newest android SDK
   - wget http://dl.google.com/android/android-sdk_${ANDROID_SDK_VERSION}-linux.tgz
