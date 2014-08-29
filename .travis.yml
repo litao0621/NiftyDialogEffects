@@ -6,6 +6,7 @@ env:
 
 before_install:
   # Install base Android SDK
+  - chmod +x gradlew
   - sudo apt-get update -qq
   - if [ `uname -m` = x86_64 ]; then sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch > /dev/null; fi
   - wget http://dl.google.com/android/android-sdk_r23-linux.tgz
@@ -28,5 +29,11 @@ before_install:
   - echo yes | android update sdk --filter sys-img-x86-android-19 --no-ui --force > /dev/null
   - echo yes | android update sdk --filter extra-android-support --no-ui --force > /dev/null
   - echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
+
+before_script:
+  - chmod +x gradlew
+
+install:
+ - ./gradlew assemble
 
 script: ./gradlew clean build
