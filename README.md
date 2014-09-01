@@ -2,7 +2,9 @@ NiftyDialogEffects
 ==================
 
 Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
+
 [![Android Arsenal](http://img.shields.io/badge/%20%20%20Android%20Arsenal%20%20%20-%20%20%20NiftyDialogEffects%20%20%20-blue.svg)](http://android-arsenal.com/details/1/772)
+[![Build Status](https://travis-ci.org/sd6352051/NiftyDialogEffects.svg?branch=master)](https://travis-ci.org/sd6352051/NiftyDialogEffects)
 
 # ScreenShot
 
