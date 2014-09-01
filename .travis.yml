@@ -34,3 +34,5 @@ before_install:
 
 install:
  - ./gradlew assemble
+
+
