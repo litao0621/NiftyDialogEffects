@@ -62,7 +62,7 @@ dialogBuilder
 ([See The Effect][1])
 
 # License
-Copyright 2014 gitonway.
+Copyright 2014 litao.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
