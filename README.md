@@ -34,7 +34,8 @@ dialogBuilder
     .withTitleColor("#FFFFFF")                                  //def
     .withDividerColor("#11000000")                              //def
     .withMessage("This is a modal Dialog.")                     //.withMessage(null)  no Msg
-    .withMessageColor("#FFFFFF")                                //def
+    .withMessageColor("#FFFFFFFF")                              //def  | withMessageColor(int resid)
+    .withDialogColor("#FFE74C3C")                               //def  | withDialogColor(int resid)
     .withIcon(getResources().getDrawable(R.drawable.icon))
     .withDuration(700)                                          //def
     .withEffect(effect)                                         //def Effectstype.Slidetop
