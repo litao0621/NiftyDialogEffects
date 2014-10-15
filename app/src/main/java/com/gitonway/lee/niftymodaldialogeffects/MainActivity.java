@@ -46,7 +46,8 @@ public class MainActivity extends Activity{
                 .withTitleColor("#FFFFFF")                                  //def
                 .withDividerColor("#11000000")                              //def
                 .withMessage("This is a modal Dialog.")                     //.withMessage(null)  no Msg
-                .withMessageColor("#FFFFFF")                                //def
+                .withMessageColor("#FFFFFFFF")                              //def  | withMessageColor(int resid)
+                .withDialogColor("#FFE74C3C")                               //def  | withDialogColor(int resid)                               //def
                 .withIcon(getResources().getDrawable(R.drawable.icon))
                 .isCancelableOnTouchOutside(true)                           //def    | isCancelable(true)
                 .withDuration(700)                                          //def
