@@ -71,6 +71,10 @@ dialogBuilder
 
 ([See The Effect][1])
 
+# Developed By
+
+* 李涛-Li Tao - <onresume@live.com>
+
 # License
 Copyright 2014 litao.
 
