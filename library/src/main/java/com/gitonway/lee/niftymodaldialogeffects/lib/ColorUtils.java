@@ -3,9 +3,9 @@ package com.gitonway.lee.niftymodaldialogeffects.lib;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
 
-
+// http://stackoverflow.com/a/11171509/317862
 public class ColorUtils {
-    // http://stackoverflow.com/a/11171509/317862
+
     public static ColorFilter getColorFilter(int color) {
         ColorMatrixColorFilter colorFilter;
         int red = (color & 0xFF0000) / 0xFFFF;

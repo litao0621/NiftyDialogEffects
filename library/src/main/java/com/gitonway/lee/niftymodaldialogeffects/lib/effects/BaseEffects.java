@@ -6,8 +6,8 @@ import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.view.ViewHelper;
 
 /**
- * Created by lee on 2014/7/30.
- *
+ * Modify by lee on 2014/7/30.
+ * https://github.com/sd6352051/NiftyDialogEffects
  *
  * The MIT License (MIT)
  *
