@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 20
-    buildToolsVersion '20.0.0'
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
     defaultConfig {
         applicationId 'com.gitonway.lee.niftymodaldialogeffects.lib'
-        minSdkVersion 10
-        targetSdkVersion 19
+        minSdkVersion project.ANDROID_BUILD_MIN_SDK_VERSION
+        targetSdkVersion project.ANDROID_BUILD_TARGET_SDK_VERSION
         versionCode 1
         versionName '1.0'
 
