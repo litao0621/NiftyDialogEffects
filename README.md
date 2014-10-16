@@ -16,6 +16,15 @@ Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
 .
 ![Image][5]
 
+# Gradle
+
+```groovy
+dependencies {
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+}
+```
+
 # Usage
 ``` java
 NiftyDialogBuilder dialogBuilder=NiftyDialogBuilder.getInstance(this);
