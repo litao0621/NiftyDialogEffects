@@ -24,6 +24,9 @@ dependencies {
     compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
 }
 ```
+# Eclipse
+
+Download  [nineoldandroids-2.4.0.jar](https://github.com/downloads/JakeWharton/NineOldAndroids/nineoldandroids-2.4.0.jar) into your libs directory.
 
 # Usage
 ``` java
