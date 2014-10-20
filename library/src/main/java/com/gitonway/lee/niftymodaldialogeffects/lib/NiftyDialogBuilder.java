@@ -46,7 +46,9 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     private final String defMsgColor="#FFFFFFFF";
     
     private final String defDialogColor="#FFE74C3C";
-    
+
+
+    private static Context tmpContext;
     
     
     private Effectstype type=null;
@@ -104,9 +106,17 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     }
     
     public static NiftyDialogBuilder getInstance(Context context) {
-        instance = new NiftyDialogBuilder(context,R.style.dialog_untran);
+
+        if (instance == null || !tmpContext.equals(context)) {
+            synchronized (NiftyDialogBuilder.class) {
+                if (instance == null || !tmpContext.equals(context)) {
+                    instance = new NiftyDialogBuilder(context,R.style.dialog_untran);
+                }
+            }
+        }
+        tmpContext = context;
         return instance;
-        
+
     }
     
     private void init(Context context) {
