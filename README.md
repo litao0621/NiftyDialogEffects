@@ -6,6 +6,7 @@ Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
 
 [![Android Arsenal](http://img.shields.io/badge/%20%20%20Android%20Arsenal%20%20%20-%20%20%20NiftyDialogEffects%20%20%20-blue.svg)](http://android-arsenal.com/details/1/772)
 [![Build Status](https://travis-ci.org/sd6352051/NiftyDialogEffects.svg?branch=master)](https://travis-ci.org/sd6352051/NiftyDialogEffects)
+[![JitPack Maven](https://img.shields.io/github/tag/sd6352051/NiftyDialogEffects.svg?label=JitPack%20Maven)](https://jitpack.io/#sd6352051/NiftyDialogEffects)
 
 # ScreenShot
 
@@ -25,6 +26,18 @@ dependencies {
     compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
 }
 ```
+
+Or using [JitPack](https://jitpack.io/#sd6352051/NiftyDialogEffects):
+
+```gradle
+repositories { 
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    compile 'com.github.sd6352051:NiftyDialogEffects:1.0.0'
+}
+```
+
 # Eclipse
 
 Download  [nineoldandroids-2.4.0.jar](https://github.com/downloads/JakeWharton/NineOldAndroids/nineoldandroids-2.4.0.jar) into your libs directory.
