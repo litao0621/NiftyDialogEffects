@@ -18,12 +18,12 @@
 https://github.com/android/platform_frameworks_base/blob/master/core/res/res/layout/alert_dialog_holo.xml
 
 -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="@dimen/dialog_padding"
-    android:paddingRight="@dimen/dialog_padding">
+<RelativeLayout android:id="@+id/main"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dialog_padding"
+                android:paddingRight="@dimen/dialog_padding">
 
     <LinearLayout
 
@@ -57,7 +57,7 @@ https://github.com/android/platform_frameworks_base/blob/master/core/res/res/lay
                     android:layout_centerVertical="true"
                     android:layout_margin="8dip"
                     android:scaleType="centerInside"
-                    android:src="@null" />
+                    android:src="@null"/>
 
                 <TextView
                     android:id="@+id/alertTitle"
@@ -68,7 +68,7 @@ https://github.com/android/platform_frameworks_base/blob/master/core/res/res/lay
                     android:layout_marginLeft="8dip"
                     android:ellipsize="end"
                     android:gravity="center"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
             </RelativeLayout>
 
             <View
@@ -76,7 +76,7 @@ https://github.com/android/platform_frameworks_base/blob/master/core/res/res/lay
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="@color/divider_color"
-                android:visibility="visible" />
+                android:visibility="visible"/>
         </LinearLayout>
 
         <LinearLayout
@@ -91,41 +91,40 @@ https://github.com/android/platform_frameworks_base/blob/master/core/res/res/lay
                 style="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:paddingBottom="8dip"
-                android:paddingEnd="16dip"
-                android:paddingStart="16dip"
-                android:paddingTop="8dip"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
                 android:textColor="@color/msg_color"
-                android:textIsSelectable="true" />
+                android:textIsSelectable="true"/>
         </LinearLayout>
 
         <FrameLayout
             android:id="@+id/customPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"></FrameLayout>
+            android:layout_weight="1"
+            android:visibility="gone"></FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp">
 
             <Button
                 android:id="@+id/button1"
                 style="@style/dialog_btn"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
+                android:layout_margin="8dp"
                 android:text="OK"
-                android:visibility="gone" />
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/button2"
                 style="@style/dialog_btn"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
+                android:layout_margin="8dp"
                 android:text="Cancle"
-                android:visibility="gone" />
+                android:visibility="gone"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
