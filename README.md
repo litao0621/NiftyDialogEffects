@@ -1,6 +1,6 @@
 NiftyDialogEffects
 ==================
-NiftyDialogEffects is deprecated,I'm sorry everyone，I won't have have enough time to maintain this project.if you're interested, contact Litao<onresume@live.com>
+NiftyDialogEffects is deprecated
 
 Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
 
