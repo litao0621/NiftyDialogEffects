@@ -23,6 +23,5 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.nineoldandroids:library:2.4.0'
 }
 apply from: './gradle-mvn-push.gradle'

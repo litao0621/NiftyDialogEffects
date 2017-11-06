@@ -1,8 +1,8 @@
 package com.gitonway.lee.niftymodaldialogeffects.lib.effects;
 
+import android.animation.ObjectAnimator;
 import android.view.View;
 
-import com.nineoldandroids.animation.ObjectAnimator;
 
 /*
  * Copyright 2014 litao

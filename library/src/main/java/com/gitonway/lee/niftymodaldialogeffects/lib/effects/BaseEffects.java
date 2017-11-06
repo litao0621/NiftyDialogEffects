@@ -1,9 +1,8 @@
 package com.gitonway.lee.niftymodaldialogeffects.lib.effects;
 
+import android.animation.AnimatorSet;
 import android.view.View;
 
-import com.nineoldandroids.animation.AnimatorSet;
-import com.nineoldandroids.view.ViewHelper;
 
 /**
  * Modify by lee on 2014/7/30.
@@ -54,8 +53,8 @@ public abstract  class BaseEffects {
         mAnimatorSet.start();
     }
     public void reset(View view) {
-        ViewHelper.setPivotX(view, view.getMeasuredWidth() / 2.0f);
-        ViewHelper.setPivotY(view, view.getMeasuredHeight() / 2.0f);
+        view.setPivotX(view.getMeasuredWidth() / 2.0f);
+        view.setPivotY(view.getMeasuredHeight() / 2.0f);
     }
 
 
