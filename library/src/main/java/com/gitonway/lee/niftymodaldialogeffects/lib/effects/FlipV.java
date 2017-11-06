@@ -19,7 +19,7 @@ import android.view.View;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class FlipV extends BaseEffects{
+public class FlipV extends BaseEffects {
 
     @Override
     protected void setupAnimation(View view) {
