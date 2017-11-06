@@ -20,27 +20,17 @@ Nifty Modal Dialog Effects look like this([Nifty Modal Window Effects][1])
 
 # Gradle
 
-```groovy
-dependencies {
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
-}
-```
 
-Or using [JitPack](https://jitpack.io/#sd6352051/NiftyDialogEffects):
+using [JitPack](https://jitpack.io/#sd6352051/NiftyDialogEffects):
 
 ```gradle
 repositories { 
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    compile 'com.github.sd6352051:NiftyDialogEffects:1.0.0'
+    compile 'com.github.sd6352051:NiftyDialogEffects:v1.0.2'
 }
 ```
-
-# Eclipse
-
-Download  [nineoldandroids-2.4.0.jar](https://github.com/downloads/JakeWharton/NineOldAndroids/nineoldandroids-2.4.0.jar) into your libs directory.
 
 # Usage
 ``` java
