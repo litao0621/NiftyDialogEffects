@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 20
-    buildToolsVersion '20.0.0'
+    compileSdkVersion 26
+    buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId 'com.gitonway.lee.niftymodaldialogeffects'
-        minSdkVersion 10
-        targetSdkVersion 19
+        minSdkVersion 14
+        targetSdkVersion 26
         versionCode 1
         versionName '1.0'
     }
