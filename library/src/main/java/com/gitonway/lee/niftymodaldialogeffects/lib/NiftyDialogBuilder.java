@@ -45,6 +45,10 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private final String defDialogColor = "#FFE74C3C";
 
+
+    private static Context tmpContext;
+
+
     private Effectstype type = null;
 
     private LinearLayout mLinearLayoutView;
@@ -73,7 +77,11 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private int mDuration = -1;
 
+    private static int mOrientation = 1;
+
     private boolean isCancelable = true;
+
+    private static NiftyDialogBuilder instance;
 
     public NiftyDialogBuilder(Context context) {
         super(context);
@@ -98,7 +106,15 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     public static NiftyDialogBuilder getInstance(Context context) {
 
-        return new NiftyDialogBuilder(context, R.style.dialog_untran);
+        if (instance == null || !tmpContext.equals(context)) {
+            synchronized (NiftyDialogBuilder.class) {
+                if (instance == null || !tmpContext.equals(context)) {
+                    instance = new NiftyDialogBuilder(context, R.style.dialog_untran);
+                }
+            }
+        }
+        tmpContext = context;
+        return instance;
 
     }
 
@@ -297,6 +313,11 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         }
     }
 
+    @Override
+    public void show() {
+        super.show();
+    }
+
     private void start(Effectstype type) {
         BaseEffects animator = type.getAnimator();
         if (mDuration != -1) {
@@ -304,12 +325,6 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
         }
         animator.start(mRelativeLayoutView);
     }
-
-    @Override
-    public void show() {
-        super.show();
-    }
-
 
     @Override
     public void dismiss() {

@@ -20,14 +20,14 @@ import android.view.View;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class RotateBottom extends BaseEffects {
+public class RotateBottom extends BaseEffects{
 
     @Override
     protected void setupAnimation(View view) {
         getAnimatorSet().playTogether(
-                ObjectAnimator.ofFloat(view, "rotationX", 90, 0).setDuration(mDuration),
+                ObjectAnimator.ofFloat(view, "rotationX",90, 0).setDuration(mDuration),
                 ObjectAnimator.ofFloat(view, "translationY", 300, 0).setDuration(mDuration),
-                ObjectAnimator.ofFloat(view, "alpha", 0, 1).setDuration(mDuration * 3 / 2)
+                ObjectAnimator.ofFloat(view, "alpha", 0, 1).setDuration(mDuration*3/2)
 
         );
     }

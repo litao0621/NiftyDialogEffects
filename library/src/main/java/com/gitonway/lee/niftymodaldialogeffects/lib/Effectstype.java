@@ -32,7 +32,7 @@ import com.gitonway.lee.niftymodaldialogeffects.lib.effects.Slit;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public enum Effectstype {
+public enum  Effectstype {
 
     Fadein(FadeIn.class),
     Slideleft(SlideLeft.class),
@@ -48,23 +48,25 @@ public enum Effectstype {
     Slit(Slit.class),
     Shake(Shake.class),
     Sidefill(SideFall.class);
-    private Class<? extends BaseEffects> mEffectsClazz;
+    private Class<? extends BaseEffects> effectsClazz;
 
-    Effectstype(Class<? extends BaseEffects> mClass) {
-        mEffectsClazz = mClass;
+    private Effectstype(Class<? extends BaseEffects> mclass) {
+        effectsClazz = mclass;
     }
 
     public BaseEffects getAnimator() {
-        BaseEffects mBaseEffect = null;
-        try {
-            mBaseEffect = mEffectsClazz.newInstance();
-        } catch (ClassCastException e) {
-            throw new Error("Can not init animatorClazz instance");
-        } catch (InstantiationException e) {
-            throw new Error("Can not init animatorClazz instance");
-        } catch (IllegalAccessException e) {
-            throw new Error("Can not init animatorClazz instance");
-        }
-        return mBaseEffect;
+        BaseEffects bEffects=null;
+	try {
+		bEffects = effectsClazz.newInstance();
+	} catch (ClassCastException e) {
+		throw new Error("Can not init animatorClazz instance");
+	} catch (InstantiationException e) {
+		// TODO Auto-generated catch block
+		throw new Error("Can not init animatorClazz instance");
+	} catch (IllegalAccessException e) {
+		// TODO Auto-generated catch block
+		throw new Error("Can not init animatorClazz instance");
+	}
+	return bEffects;
     }
 }
