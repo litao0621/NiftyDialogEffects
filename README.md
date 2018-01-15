@@ -28,7 +28,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    compile 'com.github.sd6352051:NiftyDialogEffects:v1.0.2'
+    compile 'com.github.sd6352051:NiftyDialogEffects:v1.0.3'
 }
 ```
 
