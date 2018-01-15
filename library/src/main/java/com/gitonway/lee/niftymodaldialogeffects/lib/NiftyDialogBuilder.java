@@ -106,15 +106,7 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     public static NiftyDialogBuilder getInstance(Context context) {
 
-        if (instance == null || !tmpContext.equals(context)) {
-            synchronized (NiftyDialogBuilder.class) {
-                if (instance == null || !tmpContext.equals(context)) {
-                    instance = new NiftyDialogBuilder(context, R.style.dialog_untran);
-                }
-            }
-        }
-        tmpContext = context;
-        return instance;
+        return new NiftyDialogBuilder(context, R.style.dialog_untran);
 
     }
 
