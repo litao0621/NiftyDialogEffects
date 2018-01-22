@@ -45,10 +45,6 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
 
     private final String defDialogColor = "#FFE74C3C";
 
-
-    private static Context tmpContext;
-
-
     private Effectstype type = null;
 
     private LinearLayout mLinearLayoutView;
@@ -80,8 +76,6 @@ public class NiftyDialogBuilder extends Dialog implements DialogInterface {
     private static int mOrientation = 1;
 
     private boolean isCancelable = true;
-
-    private static NiftyDialogBuilder instance;
 
     public NiftyDialogBuilder(Context context) {
         super(context);
