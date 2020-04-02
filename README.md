@@ -81,7 +81,6 @@ dialogBuilder
 # Developed By
 
 * 李涛-Li Tao - <onresume@live.com> 
-* 欢迎提供一个工作机会给我
 
 # License
 Copyright 2014 litao.
